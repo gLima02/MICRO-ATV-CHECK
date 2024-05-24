@@ -76,7 +76,7 @@ namespace web_restuarante.Controllers
         {
             using IDbConnection dbConnection = OpenConnection();
 
-            var produto = await dbConnection.QueryAsync<Produto>("delete from usuario where id = @id;", new { id });
+            var produto = await dbConnection.QueryAsync<Usuario>("delete from usuario where id = @id;", new { id });
             return Ok();
         }
     }
